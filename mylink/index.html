@@ -3,18 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Siyeon's MyLink ♡</title>
+  <title>Siyeon's MyLink</title>
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
-      margin: 0;
       min-height: 100vh;
       padding: 70px 20px;
-      background: linear-gradient(135deg, #fff1f6, #f8dfeb);
-      font-family: Arial, sans-serif;
+      background: radial-gradient(circle at top, #1f1f23, #121214 70%);
+      font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Segoe UI", Roboto, sans-serif;
       text-align: center;
-      color: #603b50;
+      color: #f5f5f7;
     }
 
     .container {
@@ -22,70 +25,117 @@
       margin: auto;
     }
 
+    /* 프로필 아바타 */
     .profile {
-      width: 90px;
-      height: 90px;
+      width: 88px;
+      height: 88px;
       border-radius: 50%;
-      background: #e8b9cf;
-      margin: auto;
+      background: linear-gradient(145deg, #2a2a30, #1c1c20);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+      margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 38px;
+      font-size: 32px;
+      color: #e5e5ea;
+      transition: transform 0.3s ease;
     }
 
-    h1 { margin: 22px 0 10px; }
+    .profile:hover {
+      transform: scale(1.05);
+    }
+
+    h1 {
+      margin: 22px 0 8px;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #ffffff;
+    }
 
     .intro {
-      color: #987287;
-      margin-bottom: 35px;
+      color: #8e8e93;
+      font-size: 14px;
+      margin-bottom: 32px;
+      letter-spacing: -0.2px;
+    }
+
+    /* 링크 버튼 */
+    .link-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
 
     .link {
-      display: block;
-      padding: 18px;
-      margin: 14px 0;
-      border-radius: 15px;
-      background: white;
-      color: #603b50;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 18px 20px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #f2f2f7;
       text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 4px 12px #e9cbd9;
-      transition: transform 0.2s;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: -0.2px;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .link:hover {
-      transform: translateY(-3px);
-      background: #ffe6ef;
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.09);
+      border-color: rgba(255, 255, 255, 0.22);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      color: #ffffff;
+    }
+
+    .link:active {
+      transform: translateY(0);
     }
 
     footer {
-      margin-top: 45px;
-      font-size: 13px;
-      color: #ad8999;
+      margin-top: 48px;
+      font-size: 12px;
+      color: #636366;
+      letter-spacing: 0.5px;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="profile">♡</div>
+    <div class="profile">✦</div>
 
-    <h1>시연's MyLink </h1>
-    <p class="intro">Welcome to my little space!</p>
+    <h1>시연's MyLink</h1>
+    <p class="intro">Welcome to my space</p>
 
-    <a class="link"
-       href="https://github.com/ericakim332"
-       target="_blank" rel="noopener noreferrer">
-       GitHub ♡
-    </a>
+    <div class="link-list">
+      <a class="link"
+         href="https://music.apple.com/kr/playlist/c/pl.u-06oxpzbCYdeGMmG"
+         target="_blank" rel="noopener noreferrer">
+         <span>Music ♫</span>
+      </a>
 
-    <a class="link"
-       href="https://hyletterheart.netlify.app"
-       target="_blank" rel="noopener noreferrer">
-       My Website ♡
-    </a>
+      <a class="link"
+         href="https://hyletterheart.netlify.app"
+         target="_blank" rel="noopener noreferrer">
+         <span>My Website</span>
+      </a>
 
-    <footer>Made with by Siyeon </footer>
+      <a class="link"
+         href="https://github.com/ericakim332"
+         target="_blank" rel="noopener noreferrer">
+         <span>GitHub</span>
+      </a>
+    </div>
+
+    <footer>Made by Siyeon</footer>
   </div>
 </body>
 </html>
